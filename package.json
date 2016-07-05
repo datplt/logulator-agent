@@ -1,0 +1,11 @@
+{
+  "name": "logulator-agent",
+  "version": "0.1.0",
+  "description": "Logulator Agent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
