@@ -1,12 +1,12 @@
 {
   "name": "logulator-agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logulator Agent",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "author": "",
+  "author": "logbeat",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.4.1",
