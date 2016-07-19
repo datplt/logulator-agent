@@ -1,23 +1,18 @@
 var SERVER_PORT = 17779;
 
 var path = require('path');
-var fs = require('fs');
 var express = require('express');
 
 var debug = require('debug');
 var debuglog = debug('logulator:agent:main');
 
-var meta = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+var logUtil = require('./lib/log-util.js');
 
 var app = express();
 
 app.use('/', function(req, res, next) {
   debuglog(' + Request root-url, display metadata');
-  res.json({
-    name: meta.name,
-    version: meta.version,
-    author: meta.author
-  });
+  res.json(logUtil.getPackageInfo());
 });
 
 var server = app.listen(SERVER_PORT, '0.0.0.0', function () {
