@@ -1,6 +1,6 @@
 {
   "name": "logulator-agent",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Logulator Agent",
   "main": "index.js",
   "scripts": {
