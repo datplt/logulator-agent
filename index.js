@@ -27,3 +27,12 @@ var server = app.listen(SERVER_PORT, SERVER_HOST, function () {
 
 var ioserver = require('./lib/socketio-server.js');
 ioserver.listen(server);
+
+var destroy = function() {
+    ioserver.forceDestroy().finally(function() {
+        server.close();
+        process.exit();
+    });
+}
+
+process.on('SIGINT', destroy);
